@@ -1,25 +1,27 @@
-import 'package:flutter/material.dart';
+class Product {
+  String id;
+  String name;
+  String description;
+  double price;
+  String? imageUrl;
 
-class Product with ChangeNotifier {
-  final String id;
-  final String title;
-  final String description;
-  final double price;
-  final String imageUrl;
-  bool isFavourite;
+  Product({required this.id, required this.name, required this.description, required this.price, this.imageUrl});
 
-  Product({
-    required this.id,
-    required this.title,
-    required this.description,
-    required this.price,
-    required this.imageUrl,
-    this.isFavourite = false,
-  });
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'name': name,
+    'description': description,
+    'price': price,
+    'imageUrl': imageUrl,
+  };
 
-  void toggleFavorite() {
-    isFavourite = !isFavourite;
-    print("this item is favorite - $isFavourite");
-    notifyListeners();
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      id: json['id'],
+      name: json['name'],
+      description: json['description'],
+      price: json['price'].toDouble(),
+      imageUrl: json['imageUrl'],
+    );
   }
 }

@@ -23,10 +23,14 @@ Future<String?> showConfirmDialog(
   return res;
 }
 
-void showSnackBar(BuildContext context, String message, int second){
+void showSnackBar(BuildContext context, String message, int seconds) {
   ScaffoldMessenger.of(context).removeCurrentSnackBar();
   ScaffoldMessenger.of(context).showSnackBar(
-    SnackBar(content: Text(message), duration: Duration(seconds: second),)
+    SnackBar(
+      content: Text(message),
+      duration: Duration(seconds: seconds),
+    ),
   );
 }
+
 

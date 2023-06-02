@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shoeshop/controllers/user_controller.dart';
 
 class MyFirebaseConnect extends StatefulWidget {
   final String? errorMessage;
@@ -50,8 +52,9 @@ class _MyFirebaseConnectState extends State<MyFirebaseConnect> {
           ),
         );
       } else {
+        Get.lazyPut<UserController>(() => UserController());
         return
-            widget.builder!(context);
+          widget.builder!(context);
       }
   }
 

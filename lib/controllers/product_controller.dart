@@ -1,8 +1,9 @@
-import 'package:shoeshop/models/productt.dart';
+import 'package:shoeshop/models/product.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ProductController extends GetxController {
+
   var products = <Product>[].obs;
 
   @override
