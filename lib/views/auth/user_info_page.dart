@@ -62,7 +62,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 String name = nameController.text;
                 String phone = phoneController.text;
                 String address = addressController.text;
@@ -70,7 +70,7 @@ class _UserInfoPageState extends State<UserInfoPage> {
                 if (name.isEmpty || phone.isEmpty || address.isEmpty) {
                   showSnackBar(context, "Vui lòng điền đầy đủ thông tin", 3);
                 } else {
-                  userController.addUserInfo(name, phone, address);
+                  await userController.addUserInfo(name, phone, address);
                   if(onDone != null) {
                     onDone!();
                   };

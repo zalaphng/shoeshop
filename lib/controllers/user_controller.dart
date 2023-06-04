@@ -74,7 +74,7 @@ class UserController extends GetxController {
     }
   }
 
-  void addUserInfo(String fullName, String phone, String address) async {
+  Future<void> addUserInfo(String fullName, String phone, String address) async {
     try {
       final currentUser = FirebaseAuth.instance.currentUser;
       if (currentUser != null) {

@@ -7,7 +7,7 @@ class FavouriteController {
   final favourites = RxList<String>([]);
 
   final CollectionReference _favouritesCollection =
-    FirebaseFirestore.instance.collection('Favourites');
+  FirebaseFirestore.instance.collection('Favourites');
 
   Future<void> addFavourite(String userId, String productId) async {
     favourites.add(productId);

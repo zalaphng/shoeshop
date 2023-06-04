@@ -30,14 +30,14 @@ class _ProductPageState extends State<ProductPage> {
   Widget build(BuildContext context) {
 
     return Obx(() => GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+      // gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      //   crossAxisCount: 2,
+      //   childAspectRatio: 0.5,
+      // ),
+      gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 400,
         childAspectRatio: 0.7,
       ),
-      // gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-      //   maxCrossAxisExtent: 400,
-      //   childAspectRatio: 0.7,
-      // ),
       itemCount: productController.products.length,
       itemBuilder: (context,index) {
         return ProductItem(product: productController.products[index]);

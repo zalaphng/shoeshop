@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 import 'package:shoeshop/controllers/cart_controller.dart';
 import 'package:shoeshop/models/order.dart';
@@ -8,7 +7,6 @@ import 'package:shoeshop/services/firebase_services.dart';
 
 class OrderController extends GetxController {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
   var orders = <UserOrder>[].obs;
 
   void placeOrder(CartController cartController) async {

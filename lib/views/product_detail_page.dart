@@ -5,7 +5,6 @@ import 'package:shoeshop/controllers/cart_controller.dart';
 import 'package:shoeshop/controllers/favourite_controller.dart';
 import 'package:shoeshop/controllers/user_controller.dart';
 import 'package:shoeshop/helper/dialogs.dart';
-import 'package:shoeshop/helper/others.dart';
 import 'package:shoeshop/models/product.dart';
 import 'package:shoeshop/views/auth/page_login.dart';
 import 'package:shoeshop/views/layouts/master_layouts.dart';
@@ -82,7 +81,7 @@ class ProductDetailPage extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Text(
-              '${formatCurrency(product.price)}',
+              '\$${product.price}',
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),

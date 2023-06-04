@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ProductController extends GetxController {
-
   var products = <Product>[].obs;
 
   @override

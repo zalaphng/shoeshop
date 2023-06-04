@@ -53,7 +53,7 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10,),
-              Text(userController.currentUser!.address!, style: Theme.of(context).textTheme.headlineMedium,),
+              Text(userController.currentUser!.name!, style: Theme.of(context).textTheme.headlineMedium,),
               const SizedBox(height: 5,),
               Text(FirebaseAuth.instance.currentUser!.email!, style: Theme.of(context).textTheme.bodyMedium,),
               const SizedBox(height: 20,),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shoeshop/controllers/cart_controller.dart';
 import 'package:shoeshop/controllers/order_controller.dart';
 import 'package:get/get.dart';
-import 'package:shoeshop/helper/dialogs.dart';
 import 'package:shoeshop/views/widgets/cart_item.dart';
 
 class CartPage extends StatelessWidget {
